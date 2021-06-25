@@ -1,0 +1,3 @@
+SELECT referentes.nombre,referentes.apellido FROM referentes
+INNER JOIN nombrelargo ON referentes.idReferente = nombrelargo.idReferente
+WHERE nombrelargo.idtematica IN (SELECT idTematica FROM tematicas WHERE nombre LIKE ?)
